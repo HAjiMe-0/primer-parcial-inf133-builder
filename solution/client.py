@@ -14,15 +14,15 @@ new_character_data = {
     "dexterity": 10
 }
 response = requests.post(url=url, json=new_character_data, headers=headers)
-print("POST", response.json())
+print(response.json())
 
 response = requests.get(url=url)
-print("GET /characters Response:", response.json())
+print( response.json())
 
 
 params = {"role": "Archer", "level": 5, "charisma": 10}
 response = requests.get(url=url, params=params)
-print("GET /characters Response:", response.json())
+print( response.json())
 
 
 character_id_to_update = 2
@@ -32,12 +32,13 @@ updated_character_data = {
     "dexterity": 15
 }
 response = requests.put(f"{url}/{character_id_to_update}", json=updated_character_data, headers=headers)
-print("PUT /characters/2 Response:", response.json())
+print( response.json())
+
 
 
 character_id_to_delete = 1
 response = requests.delete(f"{url}/{character_id_to_delete}")
-print("DELETE /characters/1 Response:", response.json())
+print( response.json())
 
 
 new_character_data = {
@@ -48,8 +49,11 @@ new_character_data = {
     "strength": 10,
     "dexterity": 10
 }
+
+
 response = requests.post(url=url, json=new_character_data, headers=headers)
-print("POST /characters Response:", response.json())
+print( response.json())
 
 response = requests.get(url=url)
-print("GET /characters Response:", response.json())
+print( response.json())
+

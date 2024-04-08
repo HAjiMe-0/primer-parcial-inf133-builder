@@ -71,7 +71,7 @@ class CharacterService:
     def delete_character(character_id):
         if character_id in CharacterService.characters:
             del CharacterService.characters[character_id]
-            return {"message": f"Character with id {character_id} has been deleted successfully"}
+            return {"message": f"Character deleted successfully"}
         else:
             return None
 
